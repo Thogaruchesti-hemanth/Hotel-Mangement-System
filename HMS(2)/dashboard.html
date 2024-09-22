@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management App - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Dashboard</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="dashboard-container">
+        <section class="hotel-info">
+            <p><strong>Hotel Name:</strong> <span id="hotel-name"></span></p>
+            <p><strong>Owner Email:</strong> <span id="owner-email"></span></p>
+            <p><strong>Number of Rooms:</strong> <span id="number-of-rooms"></span></p>
+            <p><strong>Facilities:</strong> <span id="facilities"></span></p>
+            <p><strong>Cost per Room:</strong> <span id="cost-per-room"></span></p>
+        </section>
+
+        <section class="room-management">
+            <h2>Manage Rooms</h2>
+            <div class="room-actions">
+                <button id="book-room-btn">Book Room</button>
+                <button id="edit-room-btn">Edit Room</button>
+                <button id="checkout-room-btn">Checkout</button>
+            </div>
+            <div class="room-info">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Room No</th>
+                            <th>Status</th>
+                            <th>Guest</th>
+                            <th>Phone Number</th>
+                            <th>Advance Amount</th>
+                            <th>Check-In</th>
+                            <th>Check-Out</th>
+                        </tr>
+                    </thead>
+                    <tbody id="room-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="booking-popup" style="display:none;">
+        <div class ="popup-content">
+            <form id="booking-form">
+                <h3>Book a Room</h3>
+                <label for="guest-name">Guest Name:</label>
+                <input type="text" id="guest-name" name="guest-name" required><br>
+
+                <label for="room-number">Room Number:</label>
+                <input type="number" id="room-number" name="room-number" required><br>
+
+                <label for="check-in">Check-In:</label>
+                <input type="datetime-local" id="check-in" name="check-in" required><br>
+
+                <label for="check-out">Check-Out:</label>
+                <input type="datetime-local" id="check-out" name="check-out" required><br>
+
+                <label for="aadhaar-number">Aadhaar Number:</label>
+                <input type="text" id="aadhaar-number" name="aadhaar-number" required><br>
+
+                <label for="aadhaar-scan">Aadhaar Scan:</label>
+                <input type="file" id="aadhaar-scan" name="aadhaar-scan" required><br>
+
+                <label for="mobile-number1">Mobile Number 1:</label>
+                <input type="text" id="mobile-number1" name="mobile-number1" required><br>
+
+                <label for="mobile-number2">Mobile Number 2:</label>
+                <input type="text" id="mobile-number2" name="mobile-number2"><br>
+
+                <label for="purpose">Purpose:</label>
+                <input type="text" id="purpose" name="purpose" required><br>
+
+                <label for="advance-amount">Advance Amount:</label>
+                <input type="number" id="advance-amount" name="advance-amount" required><br>
+
+                <button type="submit" id="submit-booking-btn">Submit</button>
+                <button type="button" id="close-popup-btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Checkout Popup -->
+    <div id="checkout-popup" style="display:none;" >
+        <div class="popup-content">
+            <form id="checkout-form">
+                <h3>Checkout</h3>
+                <label for="checkout-room-number">Room Number:</label>
+                <input type="number" id="checkout-room-number" name="checkout-room-number" required><br>
+
+                <label for="total-amount">Balance Amount:</label>
+                <input type="number" id="total-amount" name="total-amount" required><br>
+
+                <button type="submit" id="submit-checkout-btn">Submit Payment</button>
+                <button type="button" id="close-checkout-popup-btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- External Script -->
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
