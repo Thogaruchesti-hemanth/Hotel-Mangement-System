@@ -403,7 +403,7 @@ function setupEditRoomButton() {
 
               if (aadhaarScanFile) {
                 // If a new Aadhaar scan is uploaded, upload it
-                const uniqueCode = generateUniqueCode();
+               // const uniqueCode = generateUniqueCode();
                 const aadhaarScanStorageRef = storageRef(
                   storage,
                   `aadhaarScans/${uniqueCode}`
