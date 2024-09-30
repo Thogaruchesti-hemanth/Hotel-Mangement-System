@@ -249,7 +249,7 @@ function handleBookingFormSubmit(e) {
   // Only require Aadhaar scan if a new file is uploaded, skip if in edit mode and no new file is uploaded
   let aadhaarScanPromise;
   if (aadhaarScanFile) {
-    const uniqueCode = generateUniqueCode();
+    //const uniqueCode = generateUniqueCode();
     const aadhaarScanStorageRef = storageRef(
       storage,
       `aadhaarScans/${uniqueCode}`
